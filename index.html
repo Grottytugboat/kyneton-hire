@@ -1,0 +1,1767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyneton Hire | Equipment & Party Hire Since 1982</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #1a1a1a;
+            line-height: 1.6;
+            background: #fafafa;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            z-index: 100;
+        }
+        
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #2563eb;
+        }
+        
+        .logo span {
+            color: #1a1a1a;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #666;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+        
+        .nav-cta {
+            background: #2563eb;
+            color: white !important;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        
+        .nav-cta:hover {
+            background: #1d4ed8;
+        }
+
+        .cart-badge {
+            position: relative;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #ef4444;
+            color: white;
+            font-size: 0.75rem;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.7) 0%, rgba(30, 41, 59, 0.8) 100%), url('images/hero.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .hero h1, .hero p {
+            color: white;
+        }
+        
+        .hero h1 span {
+            color: #60a5fa;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: rgba(37, 99, 235, 0.3);
+            color: #93c5fd;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: #0f172a;
+        }
+        
+        h1 span {
+            color: #2563eb;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: #cbd5e1;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #1a1a1a;
+            border: 2px solid #e2e8f0;
+        }
+        
+        .btn-secondary:hover {
+            border-color: #2563eb;
+            color: #2563eb;
+        }
+
+        .btn-success {
+            background: #10b981;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #059669;
+        }
+        
+        /* Trust Bar */
+        .trust-bar {
+            background: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .trust-bar p {
+            color: #94a3b8;
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        
+        .trust-items {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+        
+        .trust-item {
+            text-align: center;
+        }
+        
+        .trust-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2563eb;
+        }
+        
+        .trust-label {
+            color: #64748b;
+            font-size: 0.875rem;
+        }
+        
+        /* Machinery Section */
+        .machinery {
+            padding: 4rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .section-header p {
+            color: #64748b;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Search and Filter */
+        .search-filter {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .search-box {
+            flex: 1;
+            max-width: 400px;
+            padding: 1rem 1.5rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        .category-filter {
+            padding: 1rem 1.5rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 1rem;
+            background: white;
+            cursor: pointer;
+            min-width: 200px;
+        }
+
+        .category-filter:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        /* Category Chips */
+        .category-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.5rem 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 50px;
+            background: white;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .category-chip:hover {
+            border-color: #2563eb;
+            background: #f0f9ff;
+        }
+
+        .category-chip.active {
+            background: #2563eb;
+            border-color: #2563eb;
+            color: white;
+        }
+
+        /* Equipment Grid */
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .equipment-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 2px solid #e2e8f0;
+            transition: all 0.2s;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .equipment-card:hover {
+            border-color: #2563eb;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .equipment-card.selected {
+            border-color: #10b981;
+            background: #f0fdf4;
+        }
+
+        .equipment-info h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: #1a1a1a;
+        }
+
+        .equipment-info .category-tag {
+            font-size: 0.75rem;
+            color: #64748b;
+            background: #f1f5f9;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .equipment-price {
+            text-align: right;
+        }
+
+        .equipment-price .price {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #2563eb;
+        }
+
+        .equipment-price .rate {
+            font-size: 0.75rem;
+            color: #64748b;
+        }
+
+        .add-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 2px solid #e2e8f0;
+            background: white;
+            color: #2563eb;
+            font-size: 1.25rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            margin-left: 1rem;
+            flex-shrink: 0;
+        }
+
+        .add-btn:hover {
+            background: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+
+        .equipment-card.selected .add-btn {
+            background: #10b981;
+            color: white;
+            border-color: #10b981;
+        }
+
+        /* Category Headers */
+        .category-header {
+            grid-column: 1 / -1;
+            background: #f8fafc;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+            font-weight: 600;
+            color: #334155;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .category-header:first-child {
+            margin-top: 0;
+        }
+
+        /* Floating Cart */
+        .floating-cart {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            padding: 1.5rem;
+            max-width: 400px;
+            width: calc(100% - 4rem);
+            max-height: 60vh;
+            overflow-y: auto;
+            z-index: 1000;
+            transform: translateY(150%);
+            transition: transform 0.3s ease;
+        }
+
+        .floating-cart.visible {
+            transform: translateY(0);
+        }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .cart-header h3 {
+            font-size: 1.25rem;
+        }
+
+        .close-cart {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #64748b;
+        }
+
+        .cart-items {
+            margin-bottom: 1rem;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .cart-item-name {
+            font-size: 0.9rem;
+            flex: 1;
+        }
+
+        .cart-item-price {
+            font-weight: 600;
+            color: #2563eb;
+            margin: 0 1rem;
+        }
+
+        .remove-item {
+            background: none;
+            border: none;
+            color: #ef4444;
+            cursor: pointer;
+            font-size: 1.25rem;
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-top: 2px solid #e2e8f0;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .cart-total .total-price {
+            color: #2563eb;
+        }
+
+        .cart-form {
+            margin-top: 1rem;
+        }
+
+        .cart-form input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        .cart-form input:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        .cart-form textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+            min-height: 80px;
+            resize: vertical;
+        }
+
+        /* Empty State */
+        .empty-cart {
+            text-align: center;
+            padding: 2rem;
+            color: #64748b;
+        }
+
+        /* Toggle Cart Button */
+        .toggle-cart {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #2563eb;
+            color: white;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .toggle-cart:hover {
+            transform: scale(1.1);
+        }
+
+        .toggle-cart .count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #ef4444;
+            color: white;
+            font-size: 0.75rem;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        .toggle-cart.hidden {
+            display: none;
+        }
+
+        /* Success Message */
+        .success-message {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            text-align: center;
+            z-index: 2000;
+            max-width: 400px;
+            display: none;
+        }
+
+        .success-message.visible {
+            display: block;
+        }
+
+        .success-message .check {
+            width: 80px;
+            height: 80px;
+            background: #10b981;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        .success-message h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .success-message p {
+            color: #64748b;
+            margin-bottom: 1.5rem;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 1999;
+            display: none;
+        }
+
+        .overlay.visible {
+            display: block;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        
+        .contact-info h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            align-items: flex-start;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: #dbeafe;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-item strong {
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+        
+        .contact-item span {
+            color: #64748b;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: white;
+            padding: 4rem 2rem 2rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-brand .logo {
+            margin-bottom: 1rem;
+        }
+        
+        .footer-brand p {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            max-width: 300px;
+        }
+        
+        .footer-links h4 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: #64748b;
+            font-size: 0.875rem;
+        }
+        
+        /* Mobile */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .equipment-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .floating-cart {
+                right: 1rem;
+                left: 1rem;
+                width: auto;
+                max-width: none;
+            }
+
+            .toggle-cart {
+                bottom: 1rem;
+                right: 1rem;
+            }
+
+            .search-filter {
+                flex-direction: column;
+            }
+
+            .search-box, .category-filter {
+                max-width: none;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="#"><img src="images/logo.png" alt="Kyneton Hire" style="height: 50px;"></a>
+        <ul class="nav-links">
+            <li><a href="#machinery">Machinery</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="tel:0354222311" class="nav-cta">📞 (03) 5422 2311</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="badge">🛠️ Machinery & Equipment Hire</span>
+            <h1>Click to <span>book</span></h1>
+            <p>Browse our machinery pricelist, select what you need, and send us a booking request. Easy as that.</p>
+            <div class="hero-buttons">
+                <a href="#machinery" class="btn btn-primary">Browse Equipment →</a>
+                <a href="tel:0354222311" class="btn btn-secondary">📞 Call Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Big Call Button -->
+    <section style="background: #2563eb; padding: 2rem; text-align: center;">
+        <a href="tel:0354222311" style="display: inline-flex; align-items: center; gap: 1rem; background: white; color: #2563eb; padding: 1.25rem 3rem; border-radius: 100px; font-size: 1.5rem; font-weight: 700; text-decoration: none; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.2s;">
+            📞 Call Us Now: (03) 5422 2311
+        </a>
+        <p style="color: rgba(255,255,255,0.8); margin-top: 1rem; font-size: 0.9rem;">Open 7 days • Mon-Fri 7:30am-5pm • Sat 7:30am-12pm • Sun 8am-10:30am</p>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="trust-bar">
+        <p>Trusted by the Macedon Ranges community</p>
+        <div class="trust-items">
+            <div class="trust-item">
+                <div class="trust-number">40+</div>
+                <div class="trust-label">Years Experience</div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-number">200+</div>
+                <div class="trust-label">Items Available</div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-number">★★★★★</div>
+                <div class="trust-label">5-Star Service</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section style="padding: 4rem 2rem; background: white;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div class="section-header">
+                <h2>Quality Equipment, Local Service</h2>
+                <p>From landscaping to construction - we've got the gear you need</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                <div style="border-radius: 16px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    <img src="images/lawn.jpg" alt="Lawn & Garden Equipment" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 1.5rem;">
+                        <h3 style="margin-bottom: 0.5rem;">Lawn & Garden</h3>
+                        <p style="color: #64748b; font-size: 0.9rem;">Mowers, slashers, excavators & more for your landscaping projects</p>
+                    </div>
+                </div>
+                <div style="border-radius: 16px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    <img src="images/concrete.jpg" alt="Concreting Equipment" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 1.5rem;">
+                        <h3 style="margin-bottom: 0.5rem;">Concreting</h3>
+                        <p style="color: #64748b; font-size: 0.9rem;">Mixers, vibrators, saws & finishing tools for concrete work</p>
+                    </div>
+                </div>
+                <div style="border-radius: 16px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    <img src="images/trailers.jpg" alt="Trailer Hire" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 1.5rem;">
+                        <h3 style="margin-bottom: 0.5rem;">Trailers</h3>
+                        <p style="color: #64748b; font-size: 0.9rem;">Box, car, furniture & stock trailers in all sizes</p>
+                    </div>
+                </div>
+                <div style="border-radius: 16px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    <img src="images/tradesman.jpg" alt="Cleaning Equipment" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 1.5rem;">
+                        <h3 style="margin-bottom: 0.5rem;">Cleaning & More</h3>
+                        <p style="color: #64748b; font-size: 0.9rem;">Pressure washers, vacuums, generators & power tools</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Machinery Section -->
+    <section class="machinery" id="machinery">
+        <div class="section-header">
+            <h2>Machinery & Equipment Pricelist</h2>
+            <p>Click items to add to your booking. All prices are 8-hour day rates including GST.</p>
+        </div>
+
+        <div class="search-filter">
+            <input type="text" class="search-box" id="searchBox" placeholder="🔍 Search equipment...">
+            <select class="category-filter" id="categoryFilter">
+                <option value="">All Categories</option>
+            </select>
+        </div>
+
+        <!-- Quick Category Filters -->
+        <div id="categoryChips" style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-bottom: 2rem; padding: 0 1rem;"></div>
+
+        <div class="equipment-grid" id="equipmentGrid">
+            <!-- Equipment items will be inserted here by JavaScript -->
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" style="padding: 5rem 2rem; background: #f8fafc;">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div class="section-header">
+                <h2>About Kyneton Hire</h2>
+                <p>Proudly serving the Macedon Ranges since 1982</p>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2rem; align-items: center;">
+                <div>
+                    <p style="color: #475569; margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8;">
+                        There's a lot to think about when you're tackling a project at home or on the job site. The last thing you want to worry about is whether your equipment is reliable and ready to work.
+                    </p>
+                    <p style="color: #475569; margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8;">
+                        Which is why you want to work with a company that you can trust. We've been looking after tradies, DIYers and businesses since 1982 - and we know what works when it comes to equipment hire.
+                    </p>
+                    <p style="color: #475569; font-size: 1.1rem; line-height: 1.8;">
+                        So you can rely on us to make sure you get everything you need - on time, on budget and without stress. Whether it's a weekend project or a major construction job, Kyneton Hire has the experience, expertise and range of quality equipment to meet your every need.
+                    </p>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                    <h3 style="margin-bottom: 1.5rem; font-size: 1.25rem;">Why Choose Us?</h3>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <span style="font-size: 1.5rem;">✅</span>
+                            <span>40+ years of local experience</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <span style="font-size: 1.5rem;">🛠️</span>
+                            <span>200+ quality equipment items</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <span style="font-size: 1.5rem;">🚚</span>
+                            <span>Delivery service available</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <span style="font-size: 1.5rem;">👨‍🔧</span>
+                            <span>Expert advice & support</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <span style="font-size: 1.5rem;">📍</span>
+                            <span>Family-owned & locally operated</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <span style="font-size: 1.5rem;">🕐</span>
+                            <span>Open 7 days a week</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2>Get in touch</h2>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <strong>Visit Us</strong>
+                        <span>8-12 Beauchamp St, Kyneton VIC 3444</span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <strong>Call Us</strong>
+                        <span>(03) 5422 2311</span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div>
+                        <strong>Email Us</strong>
+                        <span>kynhire@bigpond.net.au</span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🕐</div>
+                    <div>
+                        <strong>Opening Hours</strong>
+                        <span>Mon-Fri: 7:30am - 5pm<br>Sat: 7:30am - 12pm<br>Sun: 8am - 10:30am</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.123!2d144.453!3d-37.247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDE0JzQ5LjIiUyAxNDTCsDI3JzEwLjgiRQ!5e0!3m2!1sen!2sau!4v1234567890" width="100%" height="400" style="border:0; border-radius: 16px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms & Conditions -->
+    <section id="terms" style="padding: 4rem 2rem; background: #f1f5f9;">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Hire Terms & Conditions</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                <div style="background: white; padding: 1.5rem; border-radius: 12px;">
+                    <h3 style="font-size: 1rem; margin-bottom: 1rem; color: #2563eb;">📋 Hire Rates</h3>
+                    <ul style="color: #475569; font-size: 0.9rem; line-height: 1.8; padding-left: 1.25rem;">
+                        <li>Hire rates are based on an 8-hour day, 5-day week</li>
+                        <li>Long term hire rates available on request</li>
+                        <li>Minimum hire period is one (1) day unless otherwise stated</li>
+                        <li>Charges are for time out, not time used</li>
+                        <li>All prices shown include 10% GST</li>
+                    </ul>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 12px;">
+                    <h3 style="font-size: 1rem; margin-bottom: 1rem; color: #2563eb;">💳 Payment</h3>
+                    <ul style="color: #475569; font-size: 0.9rem; line-height: 1.8; padding-left: 1.25rem;">
+                        <li>All hire is payable in advance</li>
+                        <li>Deposit refundable when equipment returned</li>
+                        <li>Less charges for extra hire, damage, cleaning</li>
+                        <li>Fuel used will be charged for</li>
+                        <li>All consumables extra</li>
+                    </ul>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 12px;">
+                    <h3 style="font-size: 1rem; margin-bottom: 1rem; color: #2563eb;">⚠️ Hirer Responsibility</h3>
+                    <ul style="color: #475569; font-size: 0.9rem; line-height: 1.8; padding-left: 1.25rem;">
+                        <li>Guard equipment against theft, damage or negligence</li>
+                        <li>Equipment damaged, stolen or lost will be charged</li>
+                        <li>Responsible for daily checks: Oil, Water, Batteries, Fuel</li>
+                        <li>No interstate use permitted</li>
+                    </ul>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 12px;">
+                    <h3 style="font-size: 1rem; margin-bottom: 1rem; color: #2563eb;">📍 Service Area</h3>
+                    <ul style="color: #475569; font-size: 0.9rem; line-height: 1.8; padding-left: 1.25rem;">
+                        <li>Kyneton & surrounds</li>
+                        <li>Woodend, Macedon, Mount Macedon</li>
+                        <li>Gisborne, Daylesford</li>
+                        <li>Bendigo and beyond</li>
+                        <li>Delivery service Mon-Fri</li>
+                    </ul>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 2rem; color: #64748b; font-size: 0.875rem;">
+                We reserve the right to change rates at any time without notice. For full terms & conditions, please contact us.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="images/logo.png" alt="Kyneton Hire" style="height: 60px; margin-bottom: 1rem;">
+                <p>Family-owned equipment hire serving the Macedon Ranges since 1982. High standards, low stress.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Equipment</h4>
+                <ul>
+                    <li><a href="#machinery">Machinery</a></li>
+                    <li><a href="#">Trailers</a></li>
+                    <li><a href="#">Generators</a></li>
+                    <li><a href="#">Compaction</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Popular</h4>
+                <ul>
+                    <li><a href="#">Excavators</a></li>
+                    <li><a href="#">Concrete Saws</a></li>
+                    <li><a href="#">Pressure Washers</a></li>
+                    <li><a href="#">Floor Sanders</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:0354222311">(03) 5422 2311</a></li>
+                    <li><a href="mailto:kynhire@bigpond.net.au">Email Us</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#terms">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Kyneton Hire. All rights reserved. | Serving Macedon Ranges with pride since 1982.</p>
+        </div>
+    </footer>
+
+    <!-- Toggle Cart Button -->
+    <button class="toggle-cart hidden" id="toggleCart" onclick="toggleCart()">
+        🛒
+        <span class="count" id="cartCount">0</span>
+    </button>
+
+    <!-- Floating Cart -->
+    <div class="floating-cart" id="floatingCart">
+        <div class="cart-header">
+            <h3>🛒 Your Quote</h3>
+            <button class="close-cart" onclick="toggleCart()">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <p>Click items to add them to your quote</p>
+            </div>
+        </div>
+        <div class="cart-total" id="cartTotal" style="display: none;">
+            <span>Estimated Total (per day)</span>
+            <span class="total-price" id="totalPrice">$0.00</span>
+        </div>
+        <div class="cart-form" id="cartForm" style="display: none;">
+            <input type="text" id="customerName" placeholder="Your Name *" required>
+            <input type="tel" id="customerPhone" placeholder="Phone Number *" required>
+            <input type="email" id="customerEmail" placeholder="Email Address">
+            <input type="date" id="hireDate" placeholder="Hire Date">
+            <textarea id="customerNotes" placeholder="Additional notes (dates, delivery requirements, etc.)"></textarea>
+            <button class="btn btn-success" style="width: 100%;" onclick="submitQuote()">📧 Send Quote Request</button>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div class="overlay" id="overlay"></div>
+    <div class="success-message" id="successMessage">
+        <div class="check">✓</div>
+        <h3>Quote Request Sent!</h3>
+        <p>We'll get back to you within 1 business day with pricing and availability.</p>
+        <button class="btn btn-primary" onclick="closeSuccess()">Done</button>
+    </div>
+
+    <script>
+        // Category icons
+        const categoryIcons = {
+            "Lawn & Garden": "🌿",
+            "Painting & Decorating": "🎨",
+            "Trailers": "🚛",
+            "Generators": "⚡",
+            "Cleaning Equipment": "🧹",
+            "Concreting Equipment": "🏗️",
+            "Compaction Equipment": "🔨",
+            "Floor Tools": "🪵",
+            "Cutting Equipment": "✂️",
+            "Drills": "🔩",
+            "Access Equipment": "🪜",
+            "Air Compressors": "💨",
+            "Jackhammers": "⛏️",
+            "Pumps & Hoses": "💧",
+            "Fencing": "🚧",
+            "Welding Equipment": "🔥",
+            "Hand Tools": "🔧",
+            "Power Tools": "🔌",
+            "Heaters & Cooling": "🌡️",
+            "Levels & Measurement": "📐",
+            "Scaffolding": "🏢",
+            "Automotive Tools": "🚗",
+            "Plumbing Equipment": "🔧",
+            "Material Handling": "📦",
+            "Safety Equipment": "🦺",
+            "Air Tools": "💨",
+            "Augers": "🕳️",
+            "Jacks & Hydraulic": "⬆️",
+            "Saws": "🪚"
+        };
+
+        // Equipment data from the pricelist
+        const equipment = [
+            // LAWN & GARDEN
+            { name: "Billygoat Slasher Electric Start", price: 165, category: "Lawn & Garden" },
+            { name: "Brushcutter (Whipper Snipper)", price: 72, category: "Lawn & Garden", note: "Not for blackberries" },
+            { name: "4\" Chipper", price: 220, category: "Lawn & Garden", note: "$165 - 4 hours" },
+            { name: "Excavator 1.5T", price: 450, category: "Lawn & Garden", note: "Auger attach available, $340 - 4 hrs" },
+            { name: "Grass Slasher - Medium", price: 85, category: "Lawn & Garden" },
+            { name: "Grillo Trimmer/Mower", price: 85, category: "Lawn & Garden" },
+            { name: "Hedge Trimmer Electric/Petrol", price: 69, category: "Lawn & Garden" },
+            { name: "Kanga & Lawn Aerator", price: 315, category: "Lawn & Garden", note: "$240 - 4 hours" },
+            { name: "Kanga & Post Hole Digger", price: 330, category: "Lawn & Garden", note: "$250 - 4 hours" },
+            { name: "Extra Auger for Kanga (8\", 12\", 14\", 18\" & 24\")", price: 47, category: "Lawn & Garden" },
+            { name: "Kanga with Trencher", price: 395, category: "Lawn & Garden", note: "$300 - 4 hours" },
+            { name: "Kanga with 4 in 1 Bucket", price: 330, category: "Lawn & Garden", note: "$250 - 4 hours" },
+            { name: "Kanga & Rotary Hoe", price: 330, category: "Lawn & Garden", note: "$250 - 4 hours" },
+            { name: "Extra Kanga Attachment", price: 75, category: "Lawn & Garden" },
+            { name: "Rippers/Smudge Bar to Suit Kanga", price: 45, category: "Lawn & Garden" },
+            { name: "Kid Kanga with 4 in 1 Bucket", price: 260, category: "Lawn & Garden", note: "$195 - 4 hours" },
+            { name: "Kid Kanga with Post Hole Digger", price: 260, category: "Lawn & Garden", note: "$195 - 4 hours" },
+            { name: "Kid Kanga with Trencher", price: 325, category: "Lawn & Garden", note: "$245 - 4 hours" },
+            { name: "Kid Kanga & Lawn Aerator", price: 260, category: "Lawn & Garden", note: "$195 - 4 hours" },
+            { name: "6' Landscape Rake", price: 70, category: "Lawn & Garden" },
+            { name: "Lawn Aerator", price: 33, category: "Lawn & Garden" },
+            { name: "Lawn Mower", price: 65, category: "Lawn & Garden", note: "$45 - 4 hours" },
+            { name: "Lawn Roller", price: 36, category: "Lawn & Garden" },
+            { name: "Leaf Blower/Vacuum", price: 65, category: "Lawn & Garden" },
+            { name: "Log Splitter (21T - 9HP)", price: 165, category: "Lawn & Garden", note: "200kg lifter" },
+            { name: "Pole Saw - 4M Extended", price: 125, category: "Lawn & Garden", note: "$90 - 4 hours" },
+            { name: "Ride On Mower Cox - 32\" Cut", price: 175, category: "Lawn & Garden" },
+            { name: "Rotary Hoe (Large)", price: 185, category: "Lawn & Garden", note: "$135 - 4 hours" },
+            { name: "Rotary Tillers 5HP", price: 120, category: "Lawn & Garden", note: "$90 - 4 hours" },
+            { name: "Small Seed Spreader - 30kg Capacity", price: 33, category: "Lawn & Garden" },
+            { name: "Large Seed Spreader - 159kg Capacity", price: 59, category: "Lawn & Garden" },
+            { name: "Soil Leveller", price: 23, category: "Lawn & Garden" },
+            { name: "Stump Grinder - 18 HP", price: 265, category: "Lawn & Garden", note: "Up to 300mm" },
+            { name: "Tractor with 4' Slasher - 30HP Kubota 4WD", price: 380, category: "Lawn & Garden" },
+            { name: "Tractor with 4 in 1 Bucket - 30HP Kubota 4WD", price: 380, category: "Lawn & Garden" },
+            { name: "100 Litre Spray Pack", price: 66, category: "Lawn & Garden" },
+            { name: "600 Litre Spray Poison - 4M Boom", price: 125, category: "Lawn & Garden" },
+            { name: "800 Litre Furphy Tank with Pump", price: 125, category: "Lawn & Garden", note: "Fresh water" },
+            { name: "Wheelbarrow", price: 27, category: "Lawn & Garden" },
+
+            // PAINTING & DECORATING
+            { name: "Airless Spray (Petrol or Electric)", price: 225, category: "Painting & Decorating" },
+            { name: "Cherry Picker 10M Boom", price: 350, category: "Painting & Decorating" },
+            { name: "Dustless Plaster Sander & Vacuum Cleaner", price: 135, category: "Painting & Decorating" },
+            { name: "Gas Paint Burner", price: 17, category: "Painting & Decorating", note: "Gas extra" },
+            { name: "Heat Gun/Paint Burner (Electric)", price: 53, category: "Painting & Decorating" },
+            { name: "Line Marking Machine - Small", price: 22, category: "Painting & Decorating" },
+            { name: "Line Marking Machine - Large", price: 32, category: "Painting & Decorating" },
+            { name: "Painters Trestles 4'-12' Aluminium (Pair)", price: 46, category: "Painting & Decorating" },
+            { name: "Plank, Aluminium - 3M, 4M, 5M & 6M", price: 26, category: "Painting & Decorating" },
+            { name: "Plank Clamps", price: 17, category: "Painting & Decorating" },
+            { name: "Platform Ladder 1.1M", price: 34, category: "Painting & Decorating" },
+            { name: "Spray Gun (Bare)", price: 34, category: "Painting & Decorating" },
+            { name: "Step Ladder - 4' - 8'", price: 29, category: "Painting & Decorating" },
+            { name: "Step Ladder - 10' & 12'", price: 39, category: "Painting & Decorating" },
+            { name: "Wallpaper Perforator", price: 18, category: "Painting & Decorating" },
+            { name: "Wallpaper Stripper - Large", price: 60, category: "Painting & Decorating" },
+
+            // TRAILERS
+            { name: "6' x 4' Trailer", price: 75, category: "Trailers" },
+            { name: "6' x 4' Trailer with Crate", price: 80, category: "Trailers" },
+            { name: "3 Bike Motorbike Trailer", price: 80, category: "Trailers" },
+            { name: "7' x 5' Trailer", price: 90, category: "Trailers" },
+            { name: "7' x 5' Trailer with Ramps", price: 90, category: "Trailers" },
+            { name: "8' x 5' Trailer with Stock Crate - Tandem", price: 125, category: "Trailers" },
+            { name: "9' x 5' Trailer with Crate - Tandem", price: 115, category: "Trailers" },
+            { name: "10' x 5' Trailer - Tandem", price: 125, category: "Trailers", note: "$93 - 4 hours" },
+            { name: "10' x 6' Trailer with Stock Crate - Tandem", price: 150, category: "Trailers" },
+            { name: "12' x 8' Flat Trailer - Tandem", price: 125, category: "Trailers", note: "$93 - 4 hours" },
+            { name: "14' x 6'6\" Car Trailer with Ramps & Winch", price: 125, category: "Trailers", note: "$93 - 4 hours" },
+            { name: "Furniture Trailer 8' x 5' - Tandem", price: 115, category: "Trailers", note: "$85 - 4 hours" },
+            { name: "Furniture Trailer 10' x 6' - Tandem", price: 130, category: "Trailers", note: "$98 - 4 hours" },
+            { name: "16' x 6'6\" Tri-Axle & Winch with Electric Brakes", price: 180, category: "Trailers" },
+            { name: "Winch", price: 21, category: "Trailers" },
+
+            // GENERATORS
+            { name: "2.4KVA Inverted Generator", price: 97, category: "Generators" },
+            { name: "2KVA Generator", price: 82, category: "Generators" },
+            { name: "3.5KVA Generator", price: 92, category: "Generators" },
+            { name: "5KVA Inverter Generator", price: 123, category: "Generators" },
+            { name: "5.5KVA Generator", price: 113, category: "Generators" },
+            { name: "6.5KVA Generator", price: 118, category: "Generators" },
+            { name: "6.5KVA Inverter Generator", price: 133, category: "Generators" },
+            { name: "8KVA Generator", price: 138, category: "Generators" },
+            { name: "15KVA Generator", price: 280, category: "Generators" },
+            { name: "30KVA Generator", price: 360, category: "Generators" },
+            { name: "3 Phase Lead (25M)", price: 55, category: "Generators" },
+            { name: "Power Board", price: 90, category: "Generators" },
+
+            // CLEANING EQUIPMENT
+            { name: "Carpet Cleaner", price: 120, category: "Cleaning Equipment" },
+            { name: "Back Pack Vacuum", price: 66, category: "Cleaning Equipment" },
+            { name: "Chimney Broom (8.1M)", price: 45, category: "Cleaning Equipment" },
+            { name: "Pressure Hot Wash 1500 PSI Electric", price: 180, category: "Cleaning Equipment" },
+            { name: "Pressure Wash Cold 1800 PSI Electric", price: 85, category: "Cleaning Equipment" },
+            { name: "Cold Wash 3500 PSI Petrol with Drain Cleaner (30M)", price: 275, category: "Cleaning Equipment" },
+            { name: "Pressure Wash Cold 4000 PSI Petrol", price: 185, category: "Cleaning Equipment" },
+            { name: "Surface Cleaner", price: 30, category: "Cleaning Equipment" },
+            { name: "Exhaust Fan 405mm", price: 76, category: "Cleaning Equipment", note: "Ducting extra" },
+            { name: "Vacuum Cleaner - Large", price: 70, category: "Cleaning Equipment" },
+            { name: "Vacuum Cleaner - Extra Large 70 Ltr", price: 120, category: "Cleaning Equipment" },
+
+            // CONCRETING EQUIPMENT
+            { name: "Bull Floats - 1M & 1.2M", price: 32, category: "Concreting Equipment" },
+            { name: "Concrete Mixer 2.2CF Electric/Petrol 3CF Mixer", price: 77, category: "Concreting Equipment" },
+            { name: "Concrete Saw - 14\" (Quick Cut)", price: 220, category: "Concreting Equipment", note: "Blade included" },
+            { name: "Concrete Saw 14\" Walkbehind", price: 245, category: "Concreting Equipment", note: "Blade included" },
+            { name: "Concrete Vibrator (Petrol 38mm-60mm)", price: 110, category: "Concreting Equipment" },
+            { name: "Edger (Hand)", price: 13, category: "Concreting Equipment" },
+            { name: "Electric Vib Motor", price: 80, category: "Concreting Equipment" },
+            { name: "Electric Vib Motor & Vibrator", price: 107, category: "Concreting Equipment" },
+            { name: "Hand Float", price: 13, category: "Concreting Equipment" },
+            { name: "Petrol Trowel", price: 117, category: "Concreting Equipment" },
+            { name: "Portable Petrol Vib Needle - 45mm", price: 107, category: "Concreting Equipment" },
+            { name: "Screed Board 1.2M, 1.8M, 2.4M & 3.6M", price: 33, category: "Concreting Equipment" },
+            { name: "Screed Board 4.5M & 6M", price: 38, category: "Concreting Equipment" },
+            { name: "Vibrator Only", price: 57, category: "Concreting Equipment" },
+            { name: "Vibrator Motor Only", price: 57, category: "Concreting Equipment" },
+
+            // COMPACTION EQUIPMENT
+            { name: "Lawn Roller", price: 36, category: "Compaction Equipment" },
+            { name: "Rammer (Petrol) - Large", price: 125, category: "Compaction Equipment" },
+            { name: "1.2T Ride On Roller", price: 265, category: "Compaction Equipment", note: "$200 - 4 hours" },
+            { name: "Vib Plate Medium Petrol - 82kg", price: 125, category: "Compaction Equipment", note: "$95 - 4 hours" },
+
+            // FLOOR TOOLS
+            { name: "Carpet Dryer Blower Cold", price: 66, category: "Floor Tools" },
+            { name: "Carpet Kicker", price: 33, category: "Floor Tools" },
+            { name: "Floorboard Lifter", price: 39, category: "Floor Tools" },
+            { name: "Floor Cramp", price: 28, category: "Floor Tools" },
+            { name: "Floor Edger", price: 82, category: "Floor Tools" },
+            { name: "Floor Nailer (Air)", price: 75, category: "Floor Tools" },
+            { name: "Floor Orbital Sander & Weight", price: 137, category: "Floor Tools" },
+            { name: "Floor Polisher", price: 117, category: "Floor Tools" },
+            { name: "Floor Sander", price: 117, category: "Floor Tools" },
+            { name: "Lino Roller", price: 35, category: "Floor Tools" },
+            { name: "Ramset Gun", price: 75, category: "Floor Tools" },
+            { name: "Secret Nailer", price: 91, category: "Floor Tools" },
+
+            // CUTTING EQUIPMENT
+            { name: "Block Splitter", price: 44, category: "Cutting Equipment" },
+            { name: "Bolt Cutters", price: 23, category: "Cutting Equipment" },
+            { name: "Brick Cutting Saw Electric/Petrol", price: 220, category: "Cutting Equipment", note: "Blade included" },
+            { name: "Cement Sheet Cutter", price: 23, category: "Cutting Equipment" },
+            { name: "Pipe Cutters", price: 23, category: "Cutting Equipment" },
+            { name: "Makita 80V Cordless Quick Cut", price: 220, category: "Cutting Equipment" },
+            { name: "Quick Cut Saw 14\"", price: 220, category: "Cutting Equipment", note: "Blade included" },
+            { name: "Quick Cut Saw on Trolley", price: 245, category: "Cutting Equipment", note: "Blade included" },
+            { name: "Tile Cutter (Hand) - 400mm", price: 28, category: "Cutting Equipment" },
+            { name: "Tile Saw 7\" on Table - 400mm", price: 105, category: "Cutting Equipment", note: "Blade included" },
+            { name: "Tile Saw 650mm", price: 157, category: "Cutting Equipment", note: "Blade included" },
+
+            // DRILLS
+            { name: "Cordless Drill/Right Angle Drill", price: 55, category: "Drills" },
+            { name: "Core Drill Cutters - 52, 78, 89, 110 & 127mm", price: 70, category: "Drills" },
+            { name: "Core Drill on Stand", price: 120, category: "Drills" },
+            { name: "Drill Bits - Up to 22mm", price: 13, category: "Drills" },
+            { name: "Drill Bits - SDS & SDS Maxi - 22mm-40mm", price: 24, category: "Drills" },
+            { name: "Drills 1/2\" (Industrial Heavy Duty)", price: 54, category: "Drills" },
+            { name: "Impact Driver Cordless", price: 70, category: "Drills" },
+            { name: "Large Rotary Metabo & Maxi SDS", price: 85, category: "Drills" },
+            { name: "Magnetic Drill Stand to 1 1/4\" No.2 Morse", price: 140, category: "Drills" },
+            { name: "SDS Plus & Metabo Rotary", price: 70, category: "Drills" },
+            { name: "Core Cutters 2\"-5\" to Suit Metabo Drill", price: 70, category: "Drills" },
+
+            // ACCESS EQUIPMENT
+            { name: "Cherry Picker 10M Boom", price: 350, category: "Access Equipment", note: "$265 - 4 hours" },
+            { name: "1 Man Vertical Lifter - 7.6M Lift", price: 215, category: "Access Equipment", note: "$162 - 4 hours" },
+
+            // AIR COMPRESSORS
+            { name: "14CFM Electric Portable", price: 92, category: "Air Compressors" },
+            { name: "17CFM Electric/Petrol Portable", price: 97, category: "Air Compressors" },
+            { name: "175CFM Diesel Towable (Silenced)", price: 220, category: "Air Compressors" },
+
+            // JACKHAMMERS
+            { name: "Jackhammer Petrol", price: 150, category: "Jackhammers" },
+            { name: "Jackhammer Electric - Large Hitachi & Makita", price: 125, category: "Jackhammers" },
+            { name: "Jackhammer Electric - Hitachi Medium", price: 110, category: "Jackhammers" },
+            { name: "Jackhammer Electric - Small", price: 100, category: "Jackhammers" },
+            { name: "Spade Bit Attachment", price: 17, category: "Jackhammers" },
+            { name: "Jackhammer on Trolley - with Tile Blade", price: 200, category: "Jackhammers" },
+            { name: "Tile Lifter Attachment", price: 65, category: "Jackhammers" },
+
+            // PUMPS & HOSES
+            { name: "1 1/2\" Submersible Electric and Hose", price: 66, category: "Pumps & Hoses" },
+            { name: "2\" Electric Submersible Pump and Hose", price: 92, category: "Pumps & Hoses" },
+            { name: "2\" Petrol Pump and Hose", price: 105, category: "Pumps & Hoses" },
+            { name: "2\" Submersible Flexdrive and Hose (Sludge)", price: 125, category: "Pumps & Hoses" },
+            { name: "3\" Wacker Pump and Hose", price: 140, category: "Pumps & Hoses" },
+            { name: "4\" Wacker Pump and Hose", price: 175, category: "Pumps & Hoses" },
+            { name: "Fire Fighting Pump", price: 105, category: "Pumps & Hoses" },
+            { name: "2\" Extra Hose or Per 25M", price: 20, category: "Pumps & Hoses" },
+            { name: "3\" Extra Hose or Per 25M", price: 25, category: "Pumps & Hoses" },
+            { name: "4\" Extra Hose or Per 25M", price: 30, category: "Pumps & Hoses" },
+            { name: "Elec Pump & Motor - Flexshaft", price: 120, category: "Pumps & Hoses" },
+
+            // FENCING
+            { name: "Fence Post Hole Borer (Petrol)", price: 75, category: "Fencing" },
+            { name: "Star Post/Picket Driver - Petrol", price: 105, category: "Fencing" },
+            { name: "Steel Post Puller", price: 23, category: "Fencing" },
+            { name: "Star Picket Driver", price: 23, category: "Fencing" },
+            { name: "Wire Strainer", price: 23, category: "Fencing" },
+            { name: "Wire Spinner", price: 25, category: "Fencing" },
+
+            // WELDING EQUIPMENT
+            { name: "180 Amp Arc Welder", price: 55, category: "Welding Equipment" },
+
+            // TOOLS (HAND)
+            { name: "Clamp (Sash)", price: 23, category: "Hand Tools" },
+            { name: "Crimping Tool", price: 23, category: "Hand Tools" },
+            { name: "G-Clamp", price: 23, category: "Hand Tools" },
+            { name: "Pop Riveter", price: 23, category: "Hand Tools" },
+            { name: "Shovel/Rake/Crow Bar", price: 23, category: "Hand Tools" },
+            { name: "Sledge Hammer", price: 23, category: "Hand Tools" },
+            { name: "Star Picket Driver", price: 22, category: "Hand Tools" },
+            { name: "Wire Strainer/Hand Winch", price: 22, category: "Hand Tools" },
+
+            // TOOLS (POWER)
+            { name: "4 1/2\" Angle Grinder", price: 49, category: "Power Tools" },
+            { name: "9\" Angle Grinder", price: 54, category: "Power Tools" },
+            { name: "Electric Drills", price: 54, category: "Power Tools" },
+            { name: "Drills - Large Rotary Metabo", price: 70, category: "Power Tools" },
+            { name: "Rotary Metabo SDS Plus", price: 56, category: "Power Tools" },
+            { name: "Right Angle Drill", price: 54, category: "Power Tools" },
+            { name: "1/2\" Drill", price: 54, category: "Power Tools" },
+            { name: "1/2\" Impact", price: 54, category: "Power Tools" },
+            { name: "Extension Lead - 30M", price: 13, category: "Power Tools" },
+            { name: "Extension Lead - 60M", price: 24, category: "Power Tools" },
+            { name: "Jigsaw", price: 55, category: "Power Tools" },
+            { name: "Magnetic Drill Stand and 5/8\" Drill No.2 Morse", price: 135, category: "Power Tools" },
+            { name: "Mitre Saw (Table Saw)", price: 70, category: "Power Tools" },
+            { name: "Paint Burner Electric", price: 53, category: "Power Tools" },
+            { name: "Plaster Screw Gun", price: 70, category: "Power Tools" },
+            { name: "Power Saw 7 1/4\" & 9 1/4\"", price: 60, category: "Power Tools" },
+            { name: "Sander Belt", price: 55, category: "Power Tools" },
+            { name: "Sander 7\" Disc", price: 55, category: "Power Tools" },
+
+            // HEATERS & COOLING
+            { name: "Blower Gas Heater - Small with Fan", price: 53, category: "Heaters & Cooling", note: "Gas extra" },
+            { name: "Blower Gas Heater - Large with Fan", price: 80, category: "Heaters & Cooling", note: "Gas extra" },
+            { name: "Area Heater", price: 80, category: "Heaters & Cooling" },
+            { name: "Pedestal Fans - 750mm", price: 60, category: "Heaters & Cooling" },
+
+            // LEVELS & MEASUREMENT
+            { name: "Dumpy Level", price: 70, category: "Levels & Measurement" },
+            { name: "Laser Level", price: 97, category: "Levels & Measurement" },
+            { name: "Tape Measure/Measuring Wheel/Spirit Level", price: 22, category: "Levels & Measurement" },
+
+            // SCAFFOLDING
+            { name: "6' x 6' (1.8M x 1.8M) Alum - 12' High", price: 110, category: "Scaffolding", note: "$440 - 7 day week" },
+            { name: "8' x 4' (2.4M x 1.2M) Alum - 12' High", price: 110, category: "Scaffolding", note: "$440 - 7 day week" },
+            { name: "6' x 2' (1.8M x 600mm) Alum - 4' High", price: 70, category: "Scaffolding", note: "$280 - 7 day week" },
+
+            // AUTOMOTIVE TOOLS
+            { name: "Battery Charger", price: 23, category: "Automotive Tools" },
+            { name: "Block & Tackle", price: 28, category: "Automotive Tools" },
+            { name: "Car Ramps", price: 23, category: "Automotive Tools" },
+            { name: "Coil Spring Compressor", price: 23, category: "Automotive Tools" },
+            { name: "Compression Test Gauge", price: 23, category: "Automotive Tools" },
+            { name: "Dial Gauge & Magnetic Stand", price: 28, category: "Automotive Tools" },
+            { name: "Engine Crane - 2T", price: 55, category: "Automotive Tools" },
+            { name: "Flaring Tool - Double", price: 24, category: "Automotive Tools" },
+            { name: "Garage Jack", price: 33, category: "Automotive Tools" },
+            { name: "Jumper Leads or Jump Pack", price: 31, category: "Automotive Tools" },
+            { name: "Micrometer", price: 23, category: "Automotive Tools" },
+            { name: "Pullers (Crab Type)", price: 23, category: "Automotive Tools" },
+            { name: "Pullers (Hydraulic Set)", price: 30, category: "Automotive Tools" },
+            { name: "Tyre Bead Breaker (Slide Hammer)", price: 23, category: "Automotive Tools" },
+            { name: "Vernier Calipers", price: 23, category: "Automotive Tools" },
+
+            // PLUMBING EQUIPMENT
+            { name: "Pipe Threader 1/2\" - 1\"", price: 43, category: "Plumbing Equipment" },
+            { name: "Pipe Threader 1\" - 2\"", price: 64, category: "Plumbing Equipment" },
+            { name: "Stihlsons 3'", price: 17, category: "Plumbing Equipment" },
+            { name: "Soldering Iron - Electric/Gas", price: 17, category: "Plumbing Equipment" },
+
+            // MATERIAL HANDLING
+            { name: "Acrow Prop (7 days)", price: 17, category: "Material Handling" },
+            { name: "Air Conditioner Duct Lifter 5M to 5.6M (300kg)", price: 155, category: "Material Handling" },
+            { name: "Barrier Mesh 30M Roll", price: 18, category: "Material Handling" },
+            { name: "Block & Tackle (1T & 2T)", price: 28, category: "Material Handling" },
+            { name: "Brick Barrow", price: 28, category: "Material Handling" },
+            { name: "Builders Chemical Toilet", price: 35, category: "Material Handling", note: "Cleaning extra PW" },
+            { name: "Bunting Flags - 50M Lengths", price: 17, category: "Material Handling" },
+            { name: "Industrial Exhaust Fan 20\"", price: 72, category: "Material Handling" },
+            { name: "Metal Detector", price: 72, category: "Material Handling" },
+            { name: "Pallet Dolly 2.5T", price: 67, category: "Material Handling" },
+            { name: "Panel Lifter (Plaster) to 3.4M (68kg)", price: 72, category: "Material Handling" },
+            { name: "Panel Lifter (Plaster) Extension to 4.4M", price: 36, category: "Material Handling" },
+            { name: "Piano Dolly (450kg) & Standard Trolley", price: 27, category: "Material Handling" },
+            { name: "Stair Climber Trolley (Large)", price: 33, category: "Material Handling" },
+            { name: "Tarp 20' x 24' - 6M x 7M", price: 70, category: "Material Handling", note: "$210 PW - 7 days" },
+            { name: "Tarp 20' x 30' - 6M x 9M", price: 80, category: "Material Handling", note: "$240 PW - 7 days" },
+            { name: "Tirfor Winch (750kg & 1600kg)", price: 54, category: "Material Handling" },
+            { name: "Vermon Trap", price: 36, category: "Material Handling" },
+
+            // SAFETY EQUIPMENT
+            { name: "Forklift Cage", price: 65, category: "Safety Equipment" },
+            { name: "30M Barrier Mesh", price: 18, category: "Safety Equipment", note: "$54 PW - 7 days" },
+            { name: "T-Top Bollards", price: 16, category: "Safety Equipment", note: "$48 PW - 7 days" },
+            { name: "Witches Hat", price: 5, category: "Safety Equipment", note: "$15 PW - 7 days" },
+
+            // AIR TOOLS
+            { name: "Air Drill 3/8\" & 1/2\"", price: 49, category: "Air Tools" },
+            { name: "Air Drill 3/8\" Right Angle", price: 49, category: "Air Tools" },
+            { name: "Air Hose", price: 13, category: "Air Tools" },
+            { name: "Air Impact Wrench 1/2\"", price: 49, category: "Air Tools" },
+            { name: "Air Nailer (Brad)", price: 65, category: "Air Tools" },
+            { name: "Air Nailer (Fencing Coil)", price: 75, category: "Air Tools" },
+            { name: "Air Nailer (Flooring) - JF22", price: 75, category: "Air Tools" },
+            { name: "Air Nailer (Coil Decking)", price: 75, category: "Air Tools" },
+            { name: "Secret Nailer", price: 91, category: "Air Tools" },
+            { name: "Air Nailer (Framing)", price: 78, category: "Air Tools" },
+            { name: "Air Stapler", price: 48, category: "Air Tools" },
+            { name: "Air Stapler - 50mm", price: 65, category: "Air Tools" },
+            { name: "Impact Wrench 3/4\" & 1\"", price: 80, category: "Air Tools" },
+            { name: "Silenced Jackhammer (Medium & Large)", price: 86, category: "Air Tools" },
+            { name: "Small Jackhammer (Clay Spade)", price: 75, category: "Air Tools" },
+            { name: "Rock Drills", price: 86, category: "Air Tools" },
+            { name: "Rock Drill Steels - 900mm, 1.8M, 2.4M", price: 27, category: "Air Tools" },
+            { name: "Spade", price: 18, category: "Air Tools" },
+
+            // AUGERS
+            { name: "Augers 65mm Round 8\" - 24\"", price: 125, category: "Augers" },
+            { name: "Hand Auger 6\" & 8\"", price: 27, category: "Augers" },
+            { name: "1 Man Post Hole Digger (4\", 6\" Augers)", price: 105, category: "Augers" },
+            { name: "1 Man Post Hole Digger on Wheels", price: 150, category: "Augers" },
+            { name: "Extra Auger - for 1 Man", price: 32, category: "Augers" },
+            { name: "Post Hole Cleaner", price: 30, category: "Augers" },
+
+            // JACKS & HYDRAULIC
+            { name: "Acrow Props (7 days)", price: 17, category: "Jacks & Hydraulic" },
+            { name: "Engine Crane - 2T", price: 55, category: "Jacks & Hydraulic" },
+            { name: "Transmission Trolley Jack", price: 43, category: "Jacks & Hydraulic" },
+            { name: "Hydraulic 10T, 15T", price: 28, category: "Jacks & Hydraulic", note: "$84 PW - 7 days" },
+            { name: "Hydraulic 10T Puller - Set", price: 30, category: "Jacks & Hydraulic" },
+            { name: "Pallet Dolly - 2.5T", price: 67, category: "Jacks & Hydraulic" },
+            { name: "Pipe Bender", price: 33, category: "Jacks & Hydraulic" },
+            { name: "Porta Power - 10T", price: 55, category: "Jacks & Hydraulic" },
+            { name: "Trewhalla Jack", price: 33, category: "Jacks & Hydraulic" },
+
+            // SAWS
+            { name: "Brick Cutting Saw", price: 220, category: "Saws", note: "Blade included" },
+            { name: "Concrete Saw 14\" Walkbehind", price: 245, category: "Saws", note: "Blade included" },
+            { name: "Jigsaw", price: 55, category: "Saws" },
+            { name: "Mitre Saw (Table Saw) Compound 300mm", price: 70, category: "Saws" },
+            { name: "9 1/4\" Power Saw", price: 60, category: "Saws" },
+            { name: "14\" Quick Cut Saw (Demo)", price: 220, category: "Saws", note: "Blade included" },
+            { name: "Quick Cut Saw on Trolley", price: 245, category: "Saws", note: "Blade included" },
+            { name: "Sabre Saw", price: 60, category: "Saws" },
+            { name: "400mm Tile Saw & Stand - with Diamond Blade", price: 105, category: "Saws" },
+            { name: "650mm Tile Saw - with Blade", price: 157, category: "Saws" },
+        ];
+
+        let cart = [];
+        let cartVisible = false;
+
+        // Get unique categories
+        const categories = [...new Set(equipment.map(item => item.category))].sort();
+
+        // Populate category filter
+        const categoryFilter = document.getElementById('categoryFilter');
+        categories.forEach(cat => {
+            const option = document.createElement('option');
+            option.value = cat;
+            const icon = categoryIcons[cat] || '📦';
+            option.textContent = `${icon} ${cat}`;
+            categoryFilter.appendChild(option);
+        });
+
+        // Populate category chips
+        const chipsContainer = document.getElementById('categoryChips');
+        
+        // Add "All" chip
+        const allChip = document.createElement('button');
+        allChip.className = 'category-chip active';
+        allChip.innerHTML = '📦 All';
+        allChip.onclick = () => selectCategory('');
+        chipsContainer.appendChild(allChip);
+        
+        categories.forEach(cat => {
+            const chip = document.createElement('button');
+            chip.className = 'category-chip';
+            const icon = categoryIcons[cat] || '📦';
+            chip.innerHTML = `${icon} ${cat}`;
+            chip.onclick = () => selectCategory(cat);
+            chipsContainer.appendChild(chip);
+        });
+
+        function selectCategory(cat) {
+            document.getElementById('categoryFilter').value = cat;
+            document.querySelectorAll('.category-chip').forEach(c => c.classList.remove('active'));
+            event.target.classList.add('active');
+            renderEquipment();
+        }
+
+        // Render equipment
+        function renderEquipment() {
+            const grid = document.getElementById('equipmentGrid');
+            const searchTerm = document.getElementById('searchBox').value.toLowerCase();
+            const selectedCategory = document.getElementById('categoryFilter').value;
+
+            let filteredEquipment = equipment.filter(item => {
+                const matchesSearch = item.name.toLowerCase().includes(searchTerm);
+                const matchesCategory = !selectedCategory || item.category === selectedCategory;
+                return matchesSearch && matchesCategory;
+            });
+
+            // Group by category
+            const grouped = {};
+            filteredEquipment.forEach(item => {
+                if (!grouped[item.category]) {
+                    grouped[item.category] = [];
+                }
+                grouped[item.category].push(item);
+            });
+
+            grid.innerHTML = '';
+
+            Object.keys(grouped).sort().forEach(category => {
+                // Category header
+                const header = document.createElement('div');
+                header.className = 'category-header';
+                const icon = categoryIcons[category] || '📦';
+                header.innerHTML = `${icon} ${category}`;
+                grid.appendChild(header);
+
+                // Items in category
+                grouped[category].forEach(item => {
+                    const isSelected = cart.some(c => c.name === item.name);
+                    const card = document.createElement('div');
+                    card.className = `equipment-card ${isSelected ? 'selected' : ''}`;
+                    card.onclick = () => toggleItem(item);
+                    const itemIcon = categoryIcons[item.category] || '🔧';
+                    card.innerHTML = `
+                        <div class="equipment-info" style="display: flex; align-items: center; gap: 1rem;">
+                            <span style="font-size: 1.5rem;">${itemIcon}</span>
+                            <div>
+                                <h4>${item.name}</h4>
+                                <span class="category-tag">${item.note ? item.note : item.category}</span>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center;">
+                            <div class="equipment-price">
+                                <div class="price">$${item.price.toFixed(2)}</div>
+                                <div class="rate">per day</div>
+                            </div>
+                            <button class="add-btn">${isSelected ? '✓' : '+'}</button>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+            });
+        }
+
+        // Toggle item in cart
+        function toggleItem(item) {
+            const index = cart.findIndex(c => c.name === item.name);
+            if (index > -1) {
+                cart.splice(index, 1);
+            } else {
+                cart.push(item);
+            }
+            renderEquipment();
+            updateCart();
+        }
+
+        // Update cart display
+        function updateCart() {
+            const cartItems = document.getElementById('cartItems');
+            const cartTotal = document.getElementById('cartTotal');
+            const cartForm = document.getElementById('cartForm');
+            const toggleBtn = document.getElementById('toggleCart');
+            const cartCount = document.getElementById('cartCount');
+
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<div class="empty-cart"><p>Click items to add them to your quote</p></div>';
+                cartTotal.style.display = 'none';
+                cartForm.style.display = 'none';
+                toggleBtn.classList.add('hidden');
+            } else {
+                toggleBtn.classList.remove('hidden');
+                cartCount.textContent = cart.length;
+                
+                cartItems.innerHTML = cart.map(item => `
+                    <div class="cart-item">
+                        <span class="cart-item-name">${item.name}</span>
+                        <span class="cart-item-price">$${item.price.toFixed(2)}</span>
+                        <button class="remove-item" onclick="event.stopPropagation(); removeItem('${item.name}')">×</button>
+                    </div>
+                `).join('');
+
+                const total = cart.reduce((sum, item) => sum + item.price, 0);
+                document.getElementById('totalPrice').textContent = `$${total.toFixed(2)}`;
+                cartTotal.style.display = 'flex';
+                cartForm.style.display = 'block';
+            }
+        }
+
+        // Remove item from cart
+        function removeItem(name) {
+            cart = cart.filter(item => item.name !== name);
+            renderEquipment();
+            updateCart();
+        }
+
+        // Toggle cart visibility
+        function toggleCart() {
+            cartVisible = !cartVisible;
+            document.getElementById('floatingCart').classList.toggle('visible', cartVisible);
+        }
+
+        // Submit quote
+        function submitQuote() {
+            const name = document.getElementById('customerName').value;
+            const phone = document.getElementById('customerPhone').value;
+            const email = document.getElementById('customerEmail').value;
+            const date = document.getElementById('hireDate').value;
+            const notes = document.getElementById('customerNotes').value;
+
+            if (!name || !phone) {
+                alert('Please enter your name and phone number');
+                return;
+            }
+
+            // Build email body
+            const items = cart.map(item => `- ${item.name}: $${item.price.toFixed(2)}/day`).join('\n');
+            const total = cart.reduce((sum, item) => sum + item.price, 0);
+            
+            const body = `New Equipment Hire Quote Request
+
+Customer: ${name}
+Phone: ${phone}
+Email: ${email || 'Not provided'}
+Hire Date: ${date || 'Not specified'}
+
+Equipment Requested:
+${items}
+
+Estimated Daily Total: $${total.toFixed(2)}
+
+Additional Notes:
+${notes || 'None'}
+`;
+
+            // Create mailto link
+            const mailtoLink = `mailto:kynhire@bigpond.net.au?subject=Equipment Hire Quote Request - ${name}&body=${encodeURIComponent(body)}`;
+            window.location.href = mailtoLink;
+
+            // Show success message
+            document.getElementById('overlay').classList.add('visible');
+            document.getElementById('successMessage').classList.add('visible');
+            
+            // Clear cart
+            cart = [];
+            renderEquipment();
+            updateCart();
+            toggleCart();
+        }
+
+        // Close success message
+        function closeSuccess() {
+            document.getElementById('overlay').classList.remove('visible');
+            document.getElementById('successMessage').classList.remove('visible');
+        }
+
+        // Event listeners
+        document.getElementById('searchBox').addEventListener('input', renderEquipment);
+        document.getElementById('categoryFilter').addEventListener('change', renderEquipment);
+
+        // Initial render
+        renderEquipment();
+    </script>
+</body>
+</html>
